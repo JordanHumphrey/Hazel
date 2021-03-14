@@ -2,15 +2,13 @@
 
 #include "../Core.h"
 
-#include <string>
-#include <functional>
-
+/// <summary>
+/// Events in Hazel are currently blocking, meaning when an event occurs it
+/// immediately gets dispatched and must be dealt with right then and there.
+/// For the future, a beter strategy might be to buffer events in an event
+/// bus and process them during the "event" part of the update stage.
+/// </summary>
 namespace Hazel {
-
-	// Events in Hazel are currently blocking, meaning when an event occurs it
-	// immediately gets dispatched and must be dealt with right then and there.
-	// For the future, a beter strategy might be to buffer events in an event
-	// bus and process them during the "event" part of the update stage.
 
 	enum class EventType
 	{
